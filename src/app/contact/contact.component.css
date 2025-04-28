@@ -1,0 +1,117 @@
+.contact-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    text-align: center;
+    animation: fadeSlideUp 0.8s ease forwards;
+    opacity: 0; /* Start hidden for animation */
+  }
+  
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contact-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    position: relative;
+    text-align: left;
+  }
+  
+  label {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    font-size: 16px;
+    color: #888;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: #fff;
+    padding: 0 4px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 16px 18px 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #005F9F;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+  }
+  
+  /* Floating label effect */
+  input:focus + label,
+  input:not(:placeholder-shown) + label,
+  textarea:focus + label,
+  textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 14px;
+    font-size: 12px;
+    color: #005F9F;
+  }
+  
+  /* Errors */
+  .error {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #e53e3e;
+    font-style: italic;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background: #005F9F;
+    color: #fff;
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+  
+  .submit-btn:hover {
+    background: #4338ca;
+    animation: buttonBounce 0.4s ease;
+  }
+  
+  @keyframes buttonBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .submit-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  

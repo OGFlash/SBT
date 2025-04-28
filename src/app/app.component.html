@@ -1,212 +1,177 @@
-<header class="header-area overlay">
+<!-- Header / Navbar -->
+<header class="header-area overlay" style="position: relative; overflow: hidden;">
+   <!-- Add Font Awesome CDN here -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
   <nav class="navbar navbar-expand-md navbar-dark">
-  <div class="container">
-    <a href="#" class="navbar-brand">
-      <img src="../assets/pure-canvas-logo.png" alt="">
-  </a>
-    
-    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-      <span class="menu-icon-bar"></span>
-      <span class="menu-icon-bar"></span>
-      <span class="menu-icon-bar"></span>
-    </button>
-    
-    <div id="main-nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li>
-          <a href="#" class="nav-item nav-link active">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-          </a>
-        </li>
-        <li><a href="#" class="nav-item nav-link">Project</a>
-        </li>
-        <li>
-          <a href="#" class="nav-item nav-link">Gallery</a>
-        </li>
-        <li>
-          <a href="#" class="nav-item nav-link">Location</a>
-        </li>
-        <li><a href="#" class="nav-item nav-link">Contact</a></li>
-      </ul>
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <img src="../assets/pure-canvas-logo.png" alt="Pure Canvas Logo">
+      </a>
+
+      <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+      </button>
+
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <a href="#" class="nav-item nav-link active">
+              <mat-icon aria-hidden="false" aria-label="Home Icon" fontIcon="home"></mat-icon>
+            </a>
+          </li>
+          <li><a routerLink="/project" class="nav-item nav-link">Project</a></li>
+          <li><a routerLink="/gallery" class="nav-item nav-link">Gallery</a></li>
+          <li><a routerLink="/location" class="nav-item nav-link">Location</a></li>
+          <li><a routerLink="/contact" class="nav-item nav-link">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <ngb-carousel>
-      <ng-template ngbSlide>
-        <div class="wrapper">
-          <!-- <img [src]="images[0]" alt="Random first slide"> -->
-          <p>1</p>
-        </div>
-        <div class="carousel-caption">
-          <h3>First Slide</h3>
-          <p> Angular 10 Carousel Example </p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="wrapper">
-          <!-- <img [src]="images[1]" alt="Random second slide"> -->
-          <p>2</p>
-        </div>
-        <div class="carousel-caption">
-          <h3>Second Slide</h3>
-          <p> Check out Techiediaries</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="wrapper">
-          <!-- <img [src]="images[2]"  alt="Random third slide"> -->
-          <p>3</p>
-        </div>
-        <div class="carousel-caption">
-          <h3>Third Slide</h3>
-          <p>for full tutorial...</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
+  <!-- Banner / Carousel -->
+  <div class="carousel-wrapper" style="padding-top: 20px; overflow: hidden;">
+    <div class="container-fluid text-center">
+      <ngb-carousel #carousel style="overflow: hidden; margin-top: 60px;">
+        <ng-template ngbSlide>
+          <div class="carousel-image-wrapper">
+            <img src="../assets/slide-image-5.jpg" alt="First slide" class="img-fluid">
+            <div class="carousel-caption">
+              <h2>Microsoft 360</h2>
+              <p>Administering multiple tenants including on-premise, hybrid, and full cloud deployments</p>
+            </div>
+          </div>
+        </ng-template>
 
+        <ng-template ngbSlide>
+          <div class="carousel-image-wrapper">
+            <img src="../assets/slide-image-4.jpg" alt="Second slide" class="img-fluid">
+            <div class="carousel-caption">
+              <h2>Microsoft 361</h2>
+              <p>Administering multiple tenants including on-premise, hybrid, and full cloud deployments</p>
+            </div>
+          </div>
+        </ng-template>
 
-
+        <ng-template ngbSlide>
+          <div class="carousel-image-wrapper">
+            <img src="../assets/slide-image-3.jpg" alt="Third slide" class="img-fluid">
+            <div class="carousel-caption">
+              <h2>Microsoft 362</h2>
+              <p>Administering multiple tenants including on-premise, hybrid, and full cloud deployments</p>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
   </div>
-</nav>
-
-<div class="banner">
-  <div class="container">
-    
-  </div>
-</div>
-<!-- <a href="#content" class="button button-primary">Learn More</a> -->
 </header>
-
+<router-outlet></router-outlet>
+<!-- Main Content -->
 <main>
-<section id="content" class="content">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 style="color: #001e33;--a: 45deg;--t:.15em">About Us</h2>
-      </div>
-      <div class="col-md-4">
-        <img src="../assets/semp-in-the-flesh.jpg" alt="">
-      </div>
-      <div class="col-md-4">
-        <h2 style="color: #001e33;--a: 45deg;--t:.15em"><span>Hi, my name is Josh Lindsay. <br>I was trained as a sailmaker in Plymouth to a very high standard and started my own cover-making business over 15 years ago.</span></h2>
-      </div>
-      <div class="col-md-4">
-        <h2 style="color: #001e33;--a: 45deg;--t:.15em"><span>I do everything from the patterning to the manufacturing and fitting of the job. <br>Please don't hesitate to give me a call to discuss your project or to get a quote. </span></h2>
+  <section id="content" class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 style="color: #001e33;">About Us</h2>
+        </div>
+
+        <div class="col-md-4">
+          <img src="../assets/semp-in-the-flesh.jpg" alt="About Image">
+        </div>
+
+        <div class="col-md-4">
+          <h2 style="color: #001e33;">
+            <span>Hi, my name is Caleb Yoder. <br>I was trained as a sticky poo face in Indiana to a very high standard and started my own IT business over 10 years ago.</span>
+          </h2>
+        </div>
+
+        <div class="col-md-4">
+          <h2 style="color: #001e33;">
+            <span>I do everything from the being a sticky poo face, to creating sticky poo.<br> Please don't hesitate to give me a call to discuss your project or to get a quote.</span>
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </main>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<!-- Footer -->
 <footer class="bg-dark-gradient footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="footer-border-bottom pb-6 mb-5">
-                <div class="row">
-                    <div class="col-lg-5 col-xl-5">
-                        <h4 class="text-white">
-                            Find Us
-                        </h4>
-                    </div>
-                    <div class="col-lg-7 col-xl-7">
-                        <div class="text-lg-end text-white">
-                            <img src="../assets/pure-canvas-logo.png" alt=""><br>
-                            <span class="h4">Contact: Josh Lindsay</span><br>
-                            <span class="h4">Address: 14 Hazeldene close, Lee Mill Bridge, Ivybridge. PL219EL</span><br>
-                            <span class="h4">Mobile: 0773 773 1878</span><br>
-                            <span class="h4 mb-4">Email: <a href="mailto:josh@pure-canvas.co.uk"></a></span><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-2 my-4">
-                    <h5 class="text-white h6 mb-4">Customer</h5>
-                    <ul class="list-unstyled white-link footer-links">
-                        <li>
-                            <a href="#">Get Corpo</a>
-                        </li>
-                        <li>
-                            <a href="#">Documentation</a>
-                        </li>
-                        <li>
-                            <a href="#">Help center</a>
-                        </li>
-                        <li>
-                            <a href="#">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-lg-2 my-4">
-                    <h5 class="text-white h6 mb-4">Product</h5>
-                    <ul class="list-unstyled white-link footer-links">
-                        <li>
-                            <a href="#">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Join our team</a>
-                        </li>
-                        <li>
-                            <a href="#">Elements</a>
-                        </li>
-                        <li>
-                            <a href="#">Products</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-lg-4 my-4">
-                    <h5 class="text-white h6 mb-4">Company</h5>
-                    <ul class="list-unstyled white-link footer-links">
-                        <li>
-                            <a href="#">About</a>
-                        </li>
-                        <li>
-                            <a href="#">Careers</a>
-                        </li>
-                        <li>
-                            <a href="#">Legal &amp; Security</a>
-                        </li>
-                        <li>
-                            <a href="#">Terms of use</a>
-                        </li>
-                        <li>
-                            <a href="#">We're hiring!</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 col-lg-3 my-4">
-                  <div class="mb-4">
-                      <img src="static/img/logo-light.svg" title="" alt="">
-                  </div>
-                  <div class="text-white mb-4">Follow us on social media to find out more</div>
-                  <div class="nav footer-socila-icon">
-                      <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#">
-                        <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#">
-                        <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                  </div>
-              </div>
-            </div>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-border-bottom pb-6 mb-5">
+        <div class="row">
+          <div class="col-lg-5 col-xl-5">
+            <h4 class="text-white" (click)="openLocationComponent()">Find Us</h4>
+          </div>
+          <div class="col-lg-7 col-xl-7 text-lg-end text-white" style="margin-bottom: 20px;">
+            <!-- <img src="../assets/pure-canvas-logo.png" alt=""><br> -->
+            <span class="h4">Contact: Caleb Yoder</span><br>
+            <span class="h4">Address: 10210 New Dawn, Avon Indiana 46234</span><br>
+            <span class="h4">Mobile: 574-888-8888</span><br>
+            <span class="h4">Email: <a href="mailto:josh@pure-canvas.co.uk" class="text-reset">caleb.yoder@gmail.com</a></span><br>
+          </div>
         </div>
-    </div>
-    <div class="footer-bottom footer-border-top light py-3">
-        <div class="container text-center">
-            <p class="m-0 copyright-text">Copyright © 2025, Small Business Technologies (SBT) <a href="#" class="text-reset">by Andrew King</a></p>
-        </div>
-    </div>
-</footer>
+      </div>
 
+      <div class="row">
+        <div class="col-sm-6 col-lg-2 my-4">
+          <h5 class="text-white h6 mb-4"><b>Customer</b></h5>
+          <ul class="list-unstyled white-link footer-links">
+            <li><a href="#">Get Corpo</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2 my-4">
+          <h5 class="text-white h6 mb-4"><b>Product</b></h5>
+          <ul class="list-unstyled white-link footer-links">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Join Our Team</a></li>
+            <li><a href="#">Elements</a></li>
+            <li><a href="#">Products</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 my-4">
+          <h5 class="text-white h6 mb-4"><b>Company</b></h5>
+          <ul class="list-unstyled white-link footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Legal & Security</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">We're Hiring!</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 my-4">
+          <div class="mb-4">
+            <img src="static/img/logo-light.svg" title="" alt="">
+          </div>
+          <div class="text-white mb-4"><b>Follow us on social media to find out more</b></div>
+          <div class="nav footer-socila-icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom footer-border-top light py-3">
+    <div class="container text-center">
+      <p class="m-0 copyright-text">
+        Copyright © 2025, Small Business Technologies (SBT) 
+        <a href="#" class="text-reset">by Andrew King</a>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -40,3 +40,80 @@ h2 {
     place-content: center;
     background: #79BD9A;
   }
+  
+  ngb-carousel {
+    /* Add your styles here */
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  ::ng-deep ngb-carousel {
+    height: 300px; /* or 600px, or whatever you prefer */
+    display: flex;
+    align-items: center;
+  }
+  
+  ::ng-deep ngb-carousel .carousel-inner {
+    height: 100%;
+  }
+  
+  ::ng-deep ngb-carousel .carousel-item {
+    height: 100%;
+  }
+  
+  /* if I want it to fix big banner image */
+  /* ::ng-deep ngb-carousel .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  } */
+
+  ::ng-deep .carousel-control-prev,
+  ::ng-deep .carousel-control-next {
+    background: transparent !important;
+    border: none !important;
+    width: 8%;
+  }
+  
+  ::ng-deep .carousel-control-prev-icon,
+  ::ng-deep .carousel-control-next-icon {
+    background-image: none !important; /* Remove default small arrow images */
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  ::ng-deep .carousel-control-prev::after,
+  ::ng-deep .carousel-control-next::after {
+    font-size: 6rem;
+    color: white;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  ::ng-deep .carousel-control-prev::after {
+    content: '‹';
+    left: 10px;
+  }
+  
+  ::ng-deep .carousel-control-next::after {
+    content: '›';
+    right: 10px;
+  }
+  
+  /* Hide the default visually-hidden spans (Bootstrap 5 adds these for screen readers) */
+  ::ng-deep .carousel-control-prev .visually-hidden,
+  ::ng-deep .carousel-control-next .visually-hidden {
+    display: none !important;
+  }
+
+::ng-deep .carousel-control-prev:hover::after,
+::ng-deep .carousel-control-next:hover::after {
+  color: #ffd700; /* or any color you want, like gold */
+  transition: color 0.3s ease;
+}
+

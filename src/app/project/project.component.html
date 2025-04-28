@@ -1,0 +1,17 @@
+<div class="container py-5">
+    <h1 class="text-center mb-4">Our Projects</h1>
+    <p class="text-center mb-5">
+      Explore some of the major projects we've completed, showcasing our quality and craftsmanship.
+    </p>
+    <div class="row">
+      <div class="col-md-6 mb-4" *ngFor="let project of projects">
+        <div class="card shadow-sm h-100">
+          <img src="{{project.img}}" class="card-img-top" alt="Project Image">
+          <div class="card-body">
+            <h5 class="card-title">Project Title {{project.projectName}}</h5>
+            <p class="card-text">Brief description of project {{project.projectName}} highlighting the services provided.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
